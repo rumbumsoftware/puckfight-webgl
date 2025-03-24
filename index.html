@@ -129,7 +129,7 @@
           
           // Call Android WebView interface
           if (window.AndroidInterface) {
-            console.log("Sending to Android: " + message);
+            console.log("All Calls Logs : Sending to Android: " + message);
               window.AndroidInterface.receiveFromUnity(message);
           } else {
               console.log("AndroidInterface not found!");
@@ -138,7 +138,7 @@
   </script>
   <script>
     function notifyUnityButtonClick(message) {
-        console.log("Received from Android: " + message);
+        console.log("All Calls Logs : Received from Android: " + message);
         // Send message to Unity
         unityInstance.SendMessage("WebGLManager", "UnityMethod", message);
     }
