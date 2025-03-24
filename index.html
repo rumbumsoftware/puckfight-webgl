@@ -125,8 +125,6 @@
     </script>
     <script>
       function sendToAndroid(message) {
-        
-          
           // Call Android WebView interface
           if (window.AndroidInterface) {
             console.log("All Calls Logs : Sending to Android: " + message);
@@ -143,7 +141,5 @@
         unityInstance.SendMessage("WebGLManager", "UnityMethod", message);
     }
 </script>
-
-  
   </body>
 </html>
