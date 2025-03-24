@@ -123,5 +123,26 @@
       document.body.appendChild(script);
 
     </script>
+    <script>
+      function sendToAndroid(message) {
+          console.log("Sending to Android: " + message);
+          
+          // Call Android WebView interface
+          if (window.AndroidInterface) {
+              window.AndroidInterface.receiveFromUnity(message);
+          } else {
+              console.log("AndroidInterface not found!");
+          }
+      }
+  </script>
+  <script>
+    function receiveFromAndroid(message) {
+        console.log("Received from Android: " + message);
+        // Send message to Unity
+        unityInstance.SendMessage("WebGLManager", "UnityMethod", message);
+    }
+</script>
+
+  
   </body>
 </html>
